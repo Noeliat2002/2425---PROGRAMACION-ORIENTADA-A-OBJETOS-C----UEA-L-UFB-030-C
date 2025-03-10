@@ -1,4 +1,4 @@
-# La clase Libro se mantiene similar, pero ahora usaré una forma distinta de representar los libros.
+
 class Libro:
     def __init__(self, titulo, autor, categoria, isbn):
         self.titulo = titulo
@@ -10,7 +10,6 @@ class Libro:
         return f"Libro('{self.titulo}', '{self.autor}', '{self.categoria}', '{self.isbn}')"
 
 
-# La clase Usuario también se mantiene, pero implemento un método para agregar y eliminar libros prestados.
 class Usuario:
     def __init__(self, nombre, user_id):
         self.nombre = nombre
@@ -24,7 +23,6 @@ class Usuario:
         self.libros_prestados = [libro for libro in self.libros_prestados if libro.isbn != isbn]
 
 
-# La clase Biblioteca se hace más modular con más funciones específicas para cada acción.
 class Biblioteca:
     def __init__(self):
         self.libros = {}
